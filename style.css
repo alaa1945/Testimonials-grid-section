@@ -1,0 +1,146 @@
+@import url("https://fonts.google.com/specimen/Barlow+Semi+Condensed");
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--light-grayish-blue);
+}
+img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.header, .header1{
+  display: flex;
+  margin: 20px;
+}
+.info {
+  margin: 0 10px;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+h4 {
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+.description, .description1{
+  margin: 0 10px;
+}
+h2 {
+  font-weight: 400;
+  padding: 0 15px;
+}
+p {
+  padding: 15px;
+}
+/* Main Section */
+
+#container {
+  display: grid;
+  place-items: center;
+  margin:auto;
+  height: 100vh;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "c1 c1 c2 c5"
+    "c3 c4 c4 c5";
+  grid-gap: 20px;
+  width: 80%;
+}
+.card1 {
+  background-color: var(--moderate-violet);
+  grid-area: c1;
+  border-radius: 10px;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+}
+.card2 {
+  background-color: var(--very-dark-grayish-blue);
+  grid-area: c2;
+  border-radius: 10px;
+}
+.card3 {
+  background-color: var(--white);
+  grid-area: c3;
+  border-radius: 10px;
+}
+.card4 {
+  background-color: var(--very-dark-blackish-blue);
+  grid-area: c4;
+  border-radius: 10px;
+}
+.card5 {
+  background-color: var(--white);
+  grid-area: c5;
+  border-radius: 10px;
+}
+.header h3
+ {
+  color: var(--white);
+} 
+.header h4 {
+  color: var(--light-gray);
+}
+.description h2 {
+  color: var(--white);
+}
+.description p{
+  color: var(--light-gray);
+}
+.header1 h3
+ {
+  color: var(--very-dark-grayish-blue);
+} 
+.header1 h4 {
+  color: var(--very-dark-blackish-blue);
+}
+.description1 h2 {
+  color: var(--very-dark-grayish-blue);
+}
+.description1 p{
+  color: var(--very-dark-blackish-blue);
+}
+
+.attribution {
+  
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* End Main Section */
+
+/* Media Query */
+@media (max-width:775px){
+  #container{
+    height: 100%;
+  }
+  .cards{
+    display: flex;
+    flex-direction: column;
+    margin:30px auto;
+  }
+}
+
+/* End Media Query */
